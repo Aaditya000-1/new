@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osafi Inn - Experience the Beauty of Meghalaya</title>
+    <meta name="description" content="Discover the enchanting beauty of Meghalaya at Osafi Inn. Experience authentic homestay with breathtaking views, local culture, and warm hospitality.">
+    <meta name="keywords" content="Meghalaya homestay, Shillong accommodation, Cherrapunji stay, Meghalaya tourism, Osafi Inn, Northeast India">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        /* Fallback styles in case external CSS doesn't load */
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: #f5f5f5;
+        }
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+        }
+        section { 
+            padding: 60px 0; 
+            background: white; 
+            margin: 20px 0;
+        }
+        h1, h2, h3 { 
+            color: #2d5016; 
+            margin-bottom: 20px; 
+        }
+        .btn { 
+            background: #2d5016; 
+            color: white; 
+            padding: 12px 30px; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            display: inline-block; 
+            margin: 10px 5px;
+        }
+        .hero { 
+            background: linear-gradient(rgba(45,80,22,0.7), rgba(45,80,22,0.7)), url('MEGHALAYA.jpeg'); 
+            background-size: cover; 
+            background-position: center; 
+            height: 100vh; 
+            min-height: 600px;
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            text-align: center; 
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 500px;
+                max-height: 800px;
+            }
+            .hero-content {
+                padding: 20px;
+                max-width: 90%;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero {
+                min-height: 450px;
+                max-height: 700px;
+            }
+            .hero-content {
+                padding: 15px;
+                max-width: 95%;
+            }
+        }
+        @media (max-width: 360px) {
+            .hero {
+                min-height: 400px;
+                max-height: 600px;
+            }
+            .hero-content {
+                padding: 10px;
+                max-width: 98%;
+            }
+        }
+        .hero h1 { 
+            font-size: 3rem; 
+            color: white; 
+            margin-bottom: 20px; 
+        }
+        .hero p { 
+            font-size: 1.2rem; 
+            margin-bottom: 30px; 
+            color: white;
+        }
+        .rooms-grid, .attractions-grid, .services-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px; 
+            margin-top: 40px;
+        }
+        .room-card, .attraction-card, .service-card { 
+            background: white; 
+            border-radius: 10px; 
+            padding: 20px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+            transition: transform 0.3s ease;
+        }
+        .room-card:hover, .attraction-card:hover, .service-card:hover { 
+            transform: translateY(-5px); 
+        }
+        .room-image, .attraction-image { 
+            height: 200px; 
+            background-size: cover; 
+            background-position: center; 
+            border-radius: 8px; 
+            margin-bottom: 15px;
+        }
+        .navbar { 
+            background: white; 
+            padding: 15px 0; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            z-index: 1000;
+        }
+        .nav-container { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+        .nav-menu { 
+            display: flex; 
+            list-style: none; 
+            gap: 30px; 
+        }
+        .nav-link { 
+            text-decoration: none; 
+            color: #333; 
+            font-weight: 500; 
+        }
+        .nav-link:hover { 
+            color: #2d5016; 
+        }
+        .footer { 
+            background: #333; 
+            color: white; 
+            padding: 40px 0; 
+            text-align: center; 
+        }
+        .section-header { 
+            text-align: center; 
+            margin-bottom: 50px; 
+        }
+        .section-header h2 { 
+            font-size: 2.5rem; 
+            margin-bottom: 15px; 
+        }
+        .section-header p { 
+            font-size: 1.1rem; 
+            color: #666; 
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-menu { display: none; }
+            .rooms-grid, .attractions-grid, .services-grid { 
+                grid-template-columns: 1fr; 
+            }
+        }
+    </style>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Osafi Inn</h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#accommodations" class="nav-link">Rooms</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#attractions" class="nav-link">Attractions</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#gallery" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials" class="nav-link">Reviews</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#booking" class="nav-link booking-btn">Book Now</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <div class="hero-image" style="background-image: url('MEGHALAYA.jpeg')"></div>
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 data-aos="fade-up" data-aos-delay="200">Welcome to Osafi Inn</h1>
+                    <p data-aos="fade-up" data-aos-delay="400">Experience the enchanting beauty of Meghalaya in our authentic guest house nestled in the clouds. Where every sunrise brings new adventures and every sunset tells a story of this magical land.</p>
+                    <div class="hero-stats" data-aos="fade-up" data-aos-delay="500">
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Happy Guests</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">4.9★</span>
+                            <span class="stat-label">Average Rating</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Room Types</span>
+                        </div>
+                    </div>
+                    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600">
+                        <a href="#booking" class="btn btn-primary">Book Your Stay</a>
+                        <a href="#about" class="btn btn-secondary">Discover More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide">
+                <div class="hero-image" style="background-image: url('Nohkalikai Falls.jpeg')"></div>
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1>Authentic Meghalaya Experience</h1>
+                    <p>Immerse yourself in local culture, breathtaking landscapes, and warm Khasi hospitality. Discover living root bridges, crystal-clear rivers, and the cleanest village in Asia.</p>
+                    <div class="hero-features" data-aos="fade-up" data-aos-delay="500">
+                        <div class="feature-item">
+                            <i class="fas fa-mountain"></i>
+                            <span>Mountain Views</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-home"></i>
+                            <span>Traditional Stay</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-utensils"></i>
+                            <span>Local Cuisine</span>
+                        </div>
+                    </div>
+                    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600">
+                        <a href="#booking" class="btn btn-primary">Book Your Stay</a>
+                        <a href="#attractions" class="btn btn-secondary">Explore Attractions</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide">
+                <div class="hero-image" style="background-image: url('Meghalaya - the abode of clouds ☁️.jpeg')"></div>
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1>Luxury in Nature's Lap</h1>
+                    <p>Modern comfort meets traditional charm in the heart of Meghalaya's pristine wilderness. Wake up to the sound of birds and the sight of rolling hills stretching to the horizon.</p>
+                    <div class="hero-amenities" data-aos="fade-up" data-aos-delay="500">
+                        <div class="amenity">
+                            <i class="fas fa-wifi"></i>
+                            <span>Free WiFi</span>
+                        </div>
+                        <div class="amenity">
+                            <i class="fas fa-car"></i>
+                            <span>Parking</span>
+                        </div>
+                        <div class="amenity">
+                            <i class="fas fa-concierge-bell"></i>
+                            <span>24/7 Service</span>
+                        </div>
+                    </div>
+                    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600">
+                        <a href="#accommodations" class="btn btn-primary">View Rooms</a>
+                        <a href="#gallery" class="btn btn-secondary">See Gallery</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-navigation">
+            <button class="hero-prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="hero-next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="hero-indicators">
+            <span class="indicator active" onclick="currentSlide(1)"></span>
+            <span class="indicator" onclick="currentSlide(2)"></span>
+            <span class="indicator" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <h2>About Osafi Inn</h2>
+                    <p class="lead">Nestled in the heart of Meghalaya's breathtaking landscapes, Osafi Inn offers an authentic and luxurious homestay experience that captures the essence of this magical region.</p>
+                    <p>Our family-run guest house combines traditional Khasi architecture with modern amenities, providing guests with a unique opportunity to experience local culture while enjoying the comfort of a premium accommodation. From the moment you arrive, you'll be greeted by warm hospitality and stunning views of rolling hills, cascading waterfalls, and lush green valleys.</p>
+                    
+                    <div class="about-story">
+                        <h3>Our Story</h3>
+                        <p>Founded in 2018 by the Khasi family, Osafi Inn was born from a passion to share the beauty and culture of Meghalaya with travelers from around the world. What started as a small family home has grown into a beloved destination for those seeking authentic experiences in one of India's most beautiful states.</p>
+                    </div>
+
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-mountain"></i>
+                            <h4>Breathtaking Views</h4>
+                            <p>Panoramic views of Meghalaya's stunning landscapes from every room</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-home"></i>
+                            <h4>Authentic Experience</h4>
+                            <p>Traditional Khasi hospitality and cultural immersion activities</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-star"></i>
+                            <h4>Luxury Comfort</h4>
+                            <p>Modern amenities in a traditional setting with 24/7 service</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-utensils"></i>
+                            <h4>Local Cuisine</h4>
+                            <p>Authentic Khasi meals prepared with fresh local ingredients</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <h4>Guided Tours</h4>
+                            <p>Expert local guides for exploring Meghalaya's hidden gems</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <h4>Family Values</h4>
+                            <p>Personalized service with the warmth of a family home</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image" data-aos="fade-left">
+                    <img src="Morung House__.jpeg" alt="Osafi Inn exterior">
+                    <div class="about-badge">
+                        <i class="fas fa-award"></i>
+                        <span>Best Guest House 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Services</h2>
+                <p>We provide comprehensive services to make your stay memorable and comfortable</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h3>Accommodation</h3>
+                    <p>Comfortable rooms with traditional Khasi decor, modern amenities, and stunning views of the surrounding landscape.</p>
+                    <ul>
+                        <li>Air-conditioned rooms</li>
+                        <li>Private bathrooms</li>
+                        <li>Free WiFi</li>
+                        <li>Room service</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Dining</h3>
+                    <p>Experience authentic Khasi cuisine prepared with fresh local ingredients and traditional cooking methods.</p>
+                    <ul>
+                        <li>Traditional Khasi meals</li>
+                        <li>Vegetarian & non-vegetarian options</li>
+                        <li>Local tea & coffee</li>
+                        <li>Special dietary requirements</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Guided Tours</h3>
+                    <p>Explore Meghalaya's natural wonders with our experienced local guides who know every hidden gem.</p>
+                    <ul>
+                        <li>Cherrapunji waterfalls</li>
+                        <li>Living root bridges</li>
+                        <li>Mawlynnong village</li>
+                        <li>Dawki crystal river</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Transportation</h3>
+                    <p>Convenient transportation services to help you explore Meghalaya comfortably and safely.</p>
+                    <ul>
+                        <li>Airport pickup/drop</li>
+                        <li>Local sightseeing</li>
+                        <li>Inter-city transfers</li>
+                        <li>Adventure tours</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Cultural Activities</h3>
+                    <p>Immerse yourself in local culture through traditional activities and cultural experiences.</p>
+                    <ul>
+                        <li>Traditional dance shows</li>
+                        <li>Local craft workshops</li>
+                        <li>Cultural storytelling</li>
+                        <li>Festival celebrations</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-icon">
+                        <i class="fas fa-concierge-bell"></i>
+                    </div>
+                    <h3>Concierge</h3>
+                    <p>24/7 concierge services to assist with all your needs and make your stay seamless.</p>
+                    <ul>
+                        <li>24/7 assistance</li>
+                        <li>Travel planning</li>
+                        <li>Restaurant reservations</li>
+                        <li>Emergency support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accommodations Section -->
+    <section id="accommodations" class="accommodations">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Accommodations</h2>
+                <p>Choose from our carefully designed rooms, each offering unique views and authentic Meghalaya charm</p>
+            </div>
+            <div class="rooms-grid">
+                <div class="room-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="room-image">
+                        <img src="download (3).jpeg" alt="Deluxe Room">
+                        <div class="room-price">₹3,500/night</div>
+                    </div>
+                    <div class="room-content">
+                        <h3>Deluxe Room</h3>
+                        <p>Spacious room with panoramic valley views, traditional Khasi decor, and modern amenities.</p>
+                        <ul class="room-amenities">
+                            <li><i class="fas fa-wifi"></i> Free WiFi</li>
+                            <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
+                            <li><i class="fas fa-tv"></i> Smart TV</li>
+                            <li><i class="fas fa-bath"></i> Private Bathroom</li>
+                        </ul>
+                        <a href="#booking" class="btn btn-outline">Book Now</a>
+                    </div>
+                </div>
+                <div class="room-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="room-image">
+                        <img src="download (4).jpeg" alt="Premium Suite">
+                        <div class="room-price">₹5,500/night</div>
+                    </div>
+                    <div class="room-content">
+                        <h3>Premium Suite</h3>
+                        <p>Luxurious suite with private balcony, mountain views, and premium amenities for the ultimate comfort.</p>
+                        <ul class="room-amenities">
+                            <li><i class="fas fa-wifi"></i> Free WiFi</li>
+                            <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
+                            <li><i class="fas fa-tv"></i> Smart TV</li>
+                            <li><i class="fas fa-bath"></i> Private Bathroom</li>
+                            <li><i class="fas fa-coffee"></i> Mini Bar</li>
+                            <li><i class="fas fa-bed"></i> King Size Bed</li>
+                        </ul>
+                        <a href="#booking" class="btn btn-outline">Book Now</a>
+                    </div>
+                </div>
+                <div class="room-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="room-image">
+                        <img src="download (5).jpeg" alt="Family Villa">
+                        <div class="room-price">₹8,500/night</div>
+                    </div>
+                    <div class="room-content">
+                        <h3>Family Villa</h3>
+                        <p>Spacious villa perfect for families, featuring multiple bedrooms, living area, and private garden.</p>
+                        <ul class="room-amenities">
+                            <li><i class="fas fa-wifi"></i> Free WiFi</li>
+                            <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
+                            <li><i class="fas fa-tv"></i> Smart TV</li>
+                            <li><i class="fas fa-bath"></i> Private Bathroom</li>
+                            <li><i class="fas fa-home"></i> Living Area</li>
+                            <li><i class="fas fa-tree"></i> Private Garden</li>
+                        </ul>
+                        <a href="#booking" class="btn btn-outline">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Attractions Section -->
+    <section id="attractions" class="attractions">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Local Attractions</h2>
+                <p>Explore the natural wonders and cultural treasures of Meghalaya with our guided tours</p>
+            </div>
+            <div class="attractions-grid">
+                <div class="attraction-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="attraction-image">
+                        <img src="Nohkalikai Falls.jpeg" alt="Cherrapunji">
+                        <div class="attraction-badge">Must Visit</div>
+                    </div>
+                    <div class="attraction-content">
+                        <h3>Cherrapunji (Sohra)</h3>
+                        <p>Famous for its living root bridges and spectacular waterfalls, Cherrapunji is one of the wettest places on Earth. Experience the majestic Nohkalikai Falls and the unique double-decker living root bridge.</p>
+                        <div class="attraction-details">
+                            <div class="attraction-distance">
+                                <i class="fas fa-car"></i>
+                                <span>2 hours drive</span>
+                            </div>
+                            <div class="attraction-duration">
+                                <i class="fas fa-clock"></i>
+                                <span>Full day tour</span>
+                            </div>
+                            <div class="attraction-price">
+                                <i class="fas fa-rupee-sign"></i>
+                                <span>₹2,500 per person</span>
+                            </div>
+                        </div>
+                        <div class="attraction-highlights">
+                            <span class="highlight">Living Root Bridges</span>
+                            <span class="highlight">Nohkalikai Falls</span>
+                            <span class="highlight">Seven Sisters Falls</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="attraction-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="attraction-image">
+                        <img src="Manipur Guide.jpeg" alt="Shillong">
+                        <div class="attraction-badge">Capital City</div>
+                    </div>
+                    <div class="attraction-content">
+                        <h3>Shillong</h3>
+                        <p>The capital city known as the "Scotland of the East" with its rolling hills, pleasant climate, and vibrant culture. Explore local markets, museums, and enjoy the city's musical heritage.</p>
+                        <div class="attraction-details">
+                            <div class="attraction-distance">
+                                <i class="fas fa-car"></i>
+                                <span>1 hour drive</span>
+                            </div>
+                            <div class="attraction-duration">
+                                <i class="fas fa-clock"></i>
+                                <span>Half day tour</span>
+                            </div>
+                            <div class="attraction-price">
+                                <i class="fas fa-rupee-sign"></i>
+                                <span>₹1,500 per person</span>
+                            </div>
+                        </div>
+                        <div class="attraction-highlights">
+                            <span class="highlight">Elephant Falls</span>
+                            <span class="highlight">Shillong Peak</span>
+                            <span class="highlight">Local Markets</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="attraction-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="attraction-image">
+                        <img src="Festivals of Nagaland, Nagaland Festivals, Festival Calendar of Nagaland.jpeg" alt="Mawlynnong">
+                        <div class="attraction-badge">Cleanest Village</div>
+                    </div>
+                    <div class="attraction-content">
+                        <h3>Mawlynnong</h3>
+                        <p>Asia's cleanest village with living root bridges and breathtaking views from the skywalk. Experience sustainable living and traditional Khasi culture in this pristine village.</p>
+                        <div class="attraction-details">
+                            <div class="attraction-distance">
+                                <i class="fas fa-car"></i>
+                                <span>3 hours drive</span>
+                            </div>
+                            <div class="attraction-duration">
+                                <i class="fas fa-clock"></i>
+                                <span>Full day tour</span>
+                            </div>
+                            <div class="attraction-price">
+                                <i class="fas fa-rupee-sign"></i>
+                                <span>₹3,000 per person</span>
+                            </div>
+                        </div>
+                        <div class="attraction-highlights">
+                            <span class="highlight">Skywalk</span>
+                            <span class="highlight">Living Root Bridge</span>
+                            <span class="highlight">Clean Village</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="attraction-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="attraction-image">
+                        <img src="download (2).jpeg" alt="Dawki">
+                        <div class="attraction-badge">Crystal River</div>
+                    </div>
+                    <div class="attraction-content">
+                        <h3>Dawki</h3>
+                        <p>Famous for its crystal-clear Umngot River and the iconic suspension bridge. Experience the magical sight of boats floating on crystal-clear water and enjoy river activities.</p>
+                        <div class="attraction-details">
+                            <div class="attraction-distance">
+                                <i class="fas fa-car"></i>
+                                <span>4 hours drive</span>
+                            </div>
+                            <div class="attraction-duration">
+                                <i class="fas fa-clock"></i>
+                                <span>Full day tour</span>
+                            </div>
+                            <div class="attraction-price">
+                                <i class="fas fa-rupee-sign"></i>
+                                <span>₹3,500 per person</span>
+                            </div>
+                        </div>
+                        <div class="attraction-highlights">
+                            <span class="highlight">Crystal River</span>
+                            <span class="highlight">Suspension Bridge</span>
+                            <span class="highlight">Boat Rides</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="attraction-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="attraction-image">
+                        <img src="Morung House__.jpeg" alt="Mawsmai Caves">
+                        <div class="attraction-badge">Adventure</div>
+                    </div>
+                    <div class="attraction-content">
+                        <h3>Mawsmai Caves</h3>
+                        <p>Explore the fascinating limestone caves with stunning stalactites and stalagmites. A perfect adventure for nature lovers and photography enthusiasts.</p>
+                        <div class="attraction-details">
+                            <div class="attraction-distance">
+                                <i class="fas fa-car"></i>
+                                <span>2.5 hours drive</span>
+                            </div>
+                            <div class="attraction-duration">
+                                <i class="fas fa-clock"></i>
+                                <span>Half day tour</span>
+                            </div>
+                            <div class="attraction-price">
+                                <i class="fas fa-rupee-sign"></i>
+                                <span>₹2,000 per person</span>
+                            </div>
+                        </div>
+                        <div class="attraction-highlights">
+                            <span class="highlight">Limestone Caves</span>
+                            <span class="highlight">Stalactites</span>
+                            <span class="highlight">Adventure</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="attraction-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="attraction-image">
+                        <img src="MEGHALAYA.jpeg" alt="Nongriat">
+                        <div class="attraction-badge">Trekking</div>
+                    </div>
+                    <div class="attraction-content">
+                        <h3>Nongriat Village</h3>
+                        <p>Famous for the double-decker living root bridge, this village offers an amazing trekking experience through dense forests and traditional Khasi villages.</p>
+                        <div class="attraction-details">
+                            <div class="attraction-distance">
+                                <i class="fas fa-car"></i>
+                                <span>2 hours drive + 3km trek</span>
+                            </div>
+                            <div class="attraction-duration">
+                                <i class="fas fa-clock"></i>
+                                <span>Full day tour</span>
+                            </div>
+                            <div class="attraction-price">
+                                <i class="fas fa-rupee-sign"></i>
+                                <span>₹2,800 per person</span>
+                            </div>
+                        </div>
+                        <div class="attraction-highlights">
+                            <span class="highlight">Double Decker Bridge</span>
+                            <span class="highlight">Trekking</span>
+                            <span class="highlight">Village Life</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Photo Gallery</h2>
+                <p>Take a visual journey through Osafi Inn and its surroundings</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="MEGHALAYA.jpeg" alt="Osafi Inn exterior">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="Nohkalikai Falls.jpeg" alt="Waterfall view">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="Meghalaya - the abode of clouds ☁️.jpeg" alt="Cloudy landscape">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="Morung House__.jpeg" alt="Traditional house">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="meghalaya, india.jpeg" alt="Mountain view">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
+                    <img src="download.jpeg" alt="Scenic view">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="700">
+                    <img src="download (1).jpeg" alt="Nature view">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="800">
+                    <img src="download (2).jpeg" alt="Landscape view">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="900">
+                    <img src="Manipur Guide.jpeg" alt="Cultural view">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="1000">
+                    <img src="Festivals of Nagaland, Nagaland Festivals, Festival Calendar of Nagaland.jpeg" alt="Festival view">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Guest Reviews</h2>
+                <p>What our guests say about their experience at Osafi Inn</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card active" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Absolutely magical! The views from our room were breathtaking, and the hospitality was exceptional. The traditional Khasi breakfast was a highlight of our stay."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Sarah Johnson">
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <span>Mumbai, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The perfect blend of luxury and authenticity. The family made us feel like part of their home. The location is perfect for exploring Meghalaya's natural wonders."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Michael Chen">
+                            <div class="author-info">
+                                <h4>Michael Chen</h4>
+                                <span>Singapore</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"An unforgettable experience! The homestay exceeded all our expectations. The cultural activities and local food made our trip truly special."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Priya Sharma">
+                            <div class="author-info">
+                                <h4>Priya Sharma</h4>
+                                <span>Delhi, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-navigation">
+                <button class="testimonial-prev" onclick="changeTestimonial(-1)"><i class="fas fa-chevron-left"></i></button>
+                <button class="testimonial-next" onclick="changeTestimonial(1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <div class="container">
+            <div class="booking-content">
+                <div class="booking-info" data-aos="fade-right">
+                    <h2>Book Your Stay</h2>
+                    <p>Ready to experience the magic of Meghalaya? Book your stay with us and create memories that will last a lifetime.</p>
+                    <div class="booking-features">
+                        <div class="booking-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Free Cancellation</span>
+                        </div>
+                        <div class="booking-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Best Price Guarantee</span>
+                        </div>
+                        <div class="booking-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>24/7 Customer Support</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="booking-form" data-aos="fade-left">
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label for="checkin">Check-in Date</label>
+                            <input type="date" id="checkin" name="checkin" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout">Check-out Date</label>
+                            <input type="date" id="checkout" name="checkout" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Number of Guests</label>
+                            <select id="guests" name="guests" required>
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5+">5+ Guests</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="room">Room Type</label>
+                            <select id="room" name="room" required>
+                                <option value="deluxe">Deluxe Room - ₹3,500/night</option>
+                                <option value="premium">Premium Suite - ₹5,500/night</option>
+                                <option value="family">Family Villa - ₹8,500/night</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Check Availability & Book</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us for any inquiries or special requests</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Village Road, Near Cherrapunji<br>East Khasi Hills, Meghalaya 793108</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 98765 43210<br>+91 91234 56789</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@valleyviewhomestay.com<br>bookings@valleyviewhomestay.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Check-in/Check-out</h4>
+                            <p>Check-in: 2:00 PM<br>Check-out: 11:00 AM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Your Phone">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Osafi Inn</h3>
+                    <p>Experience the authentic beauty of Meghalaya with our luxury guest house. We offer unparalleled hospitality and breathtaking views that will create memories to last a lifetime.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#accommodations">Rooms</a></li>
+                        <li><a href="#attractions">Attractions</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#booking">Online Booking</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#">Travel Guide</a></li>
+                        <li><a href="#">Local Activities</a></li>
+                        <li><a href="#">Cultural Experiences</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Village Road, Near Cherrapunji, Meghalaya</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-envelope"></i> info@valleyviewhomestay.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Osafi Inn. All rights reserved. | Designed with ❤️ for Meghalaya</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        // Basic functionality to ensure the page works
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Website loaded successfully!');
+            
+            // Initialize AOS if available
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 1000,
+                    once: true
+                });
+            }
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Basic form handling
+            const bookingForm = document.getElementById('bookingForm');
+            if (bookingForm) {
+                bookingForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your booking request! We will contact you soon.');
+                });
+            }
+            
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your message! We will get back to you soon.');
+                });
+            }
+        });
+        
+        // Hero slider functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            if (n >= slides.length) currentSlide = 0;
+            if (n < 0) currentSlide = slides.length - 1;
+            slides[currentSlide].classList.add('active');
+        }
+        
+        function nextSlide() {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
+        
+        function prevSlide() {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+        
+        // Auto-advance slides every 5 seconds
+        setInterval(nextSlide, 5000);
+        
+        // Make functions global
+        window.changeSlide = function(direction) {
+            if (direction > 0) nextSlide();
+            else prevSlide();
+        };
+        
+        window.currentSlide = function(n) {
+            currentSlide = n - 1;
+            showSlide(currentSlide);
+        };
+    </script>
+</body>
+</html>
